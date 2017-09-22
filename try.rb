@@ -1,4 +1,4 @@
-class Dessert
+class Dessert	
   def initialize(name, calories)
     @name=name
     @calories=calories
@@ -30,7 +30,7 @@ require 'gosu'
 
 class DesertFalconGUI < Gosu::Window
   def initialize
-    super 640, 480
+    super 640, 480 
     self.caption = "Desert Falcon"
     @font = Gosu::Font.new(self, "Arial", 32)
   end
