@@ -15,7 +15,7 @@ class DesertFalconGUI < Gosu::Window
     @objArray = [] #coleção de objetos a ser usada no jogo, sempre deve conter um falcon em [0]
     @rocks = 0 #quantidade de pedras no jogo
     @hieros = 0 #quantidade de hieros no jogo
-    @playerOptionList = ["falcon", "milenium", "bat", "rocket", "arrow", "plane", "chopper", "desertwasp", "squirrel"] #opçoes de personagem pro jogador
+    @playerOptionList = ["./img/falcon/falcon.png", "./img/milenium/milenium.png", "./img/bat/bat.png", "./img/rocket/rocket.png", "./img/arrow/arrow.png", "./img/plane/plane.png", "./img/chopper/chopper.png", "./img/desertwasp/desertwasp.png", "./img/squirrel/squirrel.png"] #opçoes de personagem pro jogador
     @maxplayeroptions = 9 #quantidade de opções de personagem
     @kbSelectBuff = 0 #para impedir o teclado de atualizar a seleção de personagem mais rápido do que o usuário é capaz de notar
   end
