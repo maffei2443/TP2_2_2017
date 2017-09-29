@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Falcon
+  
+    &mdash; Documentation by YARD 0.9.9
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Falcon";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (F)</a> &raquo;
+    
+    
+    <span class="title">Falcon</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Falcon
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="GameObject.html" title="GameObject (class)">GameObject</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="GameObject.html" title="GameObject (class)">GameObject</a></span></li>
+          
+            <li class="next">Falcon</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>gameObject.rb<span class="defines">,<br />
+  try.rb</span>
+</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Objeto controlado pelo player. não necessariamente um passaro.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="GameObject.html" title="GameObject (class)">GameObject</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="GameObject.html#hitbox-instance_method" title="GameObject#hitbox (method)">#hitbox</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#draw-instance_method" title="#draw (instance method)">#<strong>draw</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Objeto renderiza seu sprite e uma sombra do seu sprite, usando o sprite do
+frame de animação atual.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#execgl-instance_method" title="#execgl (instance method)">#<strong>execgl</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Obs: nao faz sentigo execgl estar num obj do jogo ser responsavel pelo
+jogo.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(name, x, y, zlist, width, length)  &#x21d2; Falcon </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of Falcon.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#mov_down-instance_method" title="#mov_down (instance method)">#<strong>mov_down</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Abaixa altura do objeto.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#mov_left-instance_method" title="#mov_left (instance method)">#<strong>mov_left</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Movimento diagonal esquerda-cima.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#mov_right-instance_method" title="#mov_right (instance method)">#<strong>mov_right</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Movimento diagonal direita-baixo.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#mov_up-instance_method" title="#mov_up (instance method)">#<strong>mov_up</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Aumenta altura do objeto.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_frame-instance_method" title="#update_frame (instance method)">#<strong>update_frame</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Instruções a serem executadas a cada frame do jogo, atualiza o estado de
+animação e recebe entrada do teclado.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="GameObject.html" title="GameObject (class)">GameObject</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="GameObject.html#hit%3F-instance_method" title="GameObject#hit? (method)">#hit?</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(name, x, y, zlist, width, length)  &#x21d2; <tt><span class='object_link'><a href="" title="Falcon (class)">Falcon</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of Falcon</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+30
+31
+32
+33
+34
+35
+36
+37
+38</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'gameObject.rb', line 30</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_x'>x</span><span class='comma'>,</span> <span class='id identifier rubyid_y'>y</span><span class='comma'>,</span> <span class='id identifier rubyid_zlist'>zlist</span><span class='comma'>,</span> <span class='id identifier rubyid_width'>width</span><span class='comma'>,</span> <span class='id identifier rubyid_length'>length</span><span class='rparen'>)</span>
+  <span class='ivar'>@movCoolDownTimerV</span> <span class='op'>=</span> <span class='int'>0</span> <span class='comment'># Evita aceleração descontrolada na vertical.
+</span>  <span class='ivar'>@movCoolDownTimerH</span> <span class='op'>=</span> <span class='int'>0</span> <span class='comment'># Evita aceleração descontrolada na horizontal.
+</span>  <span class='ivar'>@name</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span> <span class='comment'># Nome define qual a imagem a ser carregada, preset falcon para passaro.
+</span>  <span class='ivar'>@sprites</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="Sprite.html" title="Sprite (class)">Sprite</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Sprite.html#initialize-instance_method" title="Sprite#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>./img/</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1.png</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Sprite.html" title="Sprite (class)">Sprite</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Sprite.html#initialize-instance_method" title="Sprite#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>./img/</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>2.png</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span><span class='const'><span class='object_link'><a href="Sprite.html" title="Sprite (class)">Sprite</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Sprite.html#initialize-instance_method" title="Sprite#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>./img/</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>3.png</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span><span class='const'><span class='object_link'><a href="Sprite.html" title="Sprite (class)">Sprite</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Sprite.html#initialize-instance_method" title="Sprite#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>./img/</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>4.png</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span><span class='const'><span class='object_link'><a href="Sprite.html" title="Sprite (class)">Sprite</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Sprite.html#initialize-instance_method" title="Sprite#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>./img/</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>5.png</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rbracket'>]</span> <span class='comment'># Todos os frames de animação são um sprite separado.
+</span>  <span class='ivar'>@hitbox</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Hitbox.html" title="Hitbox (class)">Hitbox</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Hitbox.html#initialize-instance_method" title="Hitbox#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_x'>x</span><span class='comma'>,</span><span class='id identifier rubyid_y'>y</span><span class='comma'>,</span><span class='id identifier rubyid_zlist'>zlist</span><span class='comma'>,</span><span class='id identifier rubyid_width'>width</span><span class='comma'>,</span><span class='id identifier rubyid_length'>length</span><span class='rparen'>)</span> <span class='comment'># Area ocupada pelo player.
+</span>  <span class='ivar'>@spritestate</span> <span class='op'>=</span> <span class='int'>1</span> <span class='comment'># Estado de frame de animação.
+</span>  <span class='ivar'>@spriteStateCounter</span> <span class='op'>=</span> <span class='int'>0</span> <span class='comment'># Contador para mudança de estado de frame de animação.
+</span><span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="draw-instance_method">
+  
+    #<strong>draw</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Objeto renderiza seu sprite e uma sombra do seu sprite, usando o sprite do
+frame de animação atual.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+40
+41
+42
+43</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'gameObject.rb', line 40</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_draw'>draw</span><span class='lparen'>(</span><span class='rparen'>)</span> <span class='comment'># Objeto renderiza seu sprite e uma sombra do seu sprite, usando o sprite do frame de animação atual.
+</span>  <span class='ivar'>@sprites</span><span class='lbracket'>[</span><span class='ivar'>@spritestate</span> <span class='op'>-</span> <span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_draw'>draw</span><span class='lparen'>(</span><span class='ivar'>@hitbox</span><span class='period'>.</span><span class='id identifier rubyid_x'>x</span><span class='comma'>,</span> <span class='ivar'>@hitbox</span><span class='period'>.</span><span class='id identifier rubyid_y'>y</span><span class='comma'>,</span> <span class='ivar'>@hitbox</span><span class='period'>.</span><span class='id identifier rubyid_zlist'>zlist</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='const'>Gosu</span><span class='op'>::</span><span class='const'>Image</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>./img/</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='ivar'>@name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='ivar'>@name</span> <span class='op'>+</span> <span class='ivar'>@spritestate</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.png</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_draw'>draw</span><span class='lparen'>(</span><span class='ivar'>@hitbox</span><span class='period'>.</span><span class='id identifier rubyid_x'>x</span><span class='comma'>,</span> <span class='ivar'>@hitbox</span><span class='period'>.</span><span class='id identifier rubyid_y'>y</span><span class='comma'>,</span> <span class='ivar'>@hitbox</span><span class='period'>.</span><span class='id identifier rubyid_zlist'>zlist</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='op'>-</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>1</span><span class='comma'>,</span> <span class='int'>1</span><span class='comma'>,</span> <span class='int'>0xff_464678</span><span class='comma'>,</span> <span class='symbol'>:default</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="execgl-instance_method">
+  
+    #<strong>execgl</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Obs: nao faz sentigo execgl estar num obj do jogo ser responsavel pelo
+jogo. Tirar daqui</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'try.rb', line 151</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_execgl'>execgl</span><span class='lparen'>(</span><span class='rparen'>)</span>			<span class='comment'># Obs: nao faz sentigo execgl estar num obj do jogo ser responsavel pelo jogo. Tirar daqui
+</span>						<span class='comment'># Sugestao : update_falcon() E funcao externa paragame_loop
+</span>  <span class='ivar'>@spriteStateCounter</span> <span class='op'>=</span> <span class='ivar'>@spriteStateCounter</span> <span class='op'>+</span> <span class='int'>1</span>
+  <span class='kw'>if</span><span class='lparen'>(</span><span class='ivar'>@spriteStateCounter</span>  <span class='op'>==</span>  <span class='int'>6</span><span class='rparen'>)</span>
+    <span class='ivar'>@spriteStateCounter</span> <span class='op'>=</span> <span class='int'>0</span>
+    <span class='ivar'>@spritestate</span> <span class='op'>=</span> <span class='ivar'>@spritestate</span> <span class='op'>+</span> <span class='int'>1</span>
+    <span class='kw'>if</span><span class='lparen'>(</span><span class='ivar'>@spritestate</span>  <span class='op'>==</span>  <span class='int'>6</span><span class='rparen'>)</span>
+      <span class='ivar'>@spritestate</span> <span class='op'>=</span> <span class='int'>1</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='ivar'>@movCoolDownTimerV</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+    <span class='ivar'>@movCoolDownTimerV</span> <span class='op'>=</span> <span class='ivar'>@movCoolDownTimerV</span> <span class='op'>-</span> <span class='int'>1</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='ivar'>@movCoolDownTimerH</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+    <span class='ivar'>@movCoolDownTimerH</span> <span class='op'>=</span> <span class='ivar'>@movCoolDownTimerH</span> <span class='op'>-</span> <span class='int'>1</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span> <span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_UP</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='lparen'>(</span><span class='ivar'>@movCoolDownTimerV</span> <span class='op'>==</span> <span class='int'>0</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_mov_up'>mov_up</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span> <span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_DOWN</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='lparen'>(</span><span class='ivar'>@movCoolDownTimerV</span> <span class='op'>==</span> <span class='int'>0</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_mov_down'>mov_down</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span> <span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_RIGHT</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='lparen'>(</span><span class='ivar'>@movCoolDownTimerH</span> <span class='op'>==</span> <span class='int'>0</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_mov_right'>mov_right</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span> <span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_LEFT</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='lparen'>(</span><span class='ivar'>@movCoolDownTimerH</span>  <span class='op'>==</span>  <span class='int'>0</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_mov_left'>mov_left</span>
+  <span class='kw'>end</span>
+
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="mov_down-instance_method">
+  
+    #<strong>mov_down</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Abaixa altura do objeto.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+52
+53
+54
+55
+56
+57</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'gameObject.rb', line 52</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_mov_down'>mov_down</span><span class='lparen'>(</span><span class='rparen'>)</span> <span class='comment'># Abaixa altura do objeto.
+</span>  <span class='kw'>if</span> <span class='lparen'>(</span><span class='ivar'>@hitbox</span><span class='period'>.</span><span class='id identifier rubyid_zlist'>zlist</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>&gt;</span> <span class='int'>1</span><span class='rparen'>)</span>
+  	<span class='ivar'>@hitbox</span><span class='period'>.</span><span class='id identifier rubyid_zlist'>zlist</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@hitbox</span><span class='period'>.</span><span class='id identifier rubyid_zlist'>zlist</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>-</span> <span class='int'>1</span>
+   <span class='ivar'>@movCoolDownTimerV</span> <span class='op'>=</span> <span class='int'>1</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="mov_left-instance_method">
+  
+    #<strong>mov_left</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Movimento diagonal esquerda-cima.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+67
+68
+69
+70
+71
+72
+73</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'gameObject.rb', line 67</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_mov_left'>mov_left</span><span class='lparen'>(</span><span class='rparen'>)</span> <span class='comment'># Movimento diagonal esquerda-cima.
+</span>  <span class='kw'>if</span> <span class='lparen'>(</span><span class='ivar'>@hitbox</span><span class='period'>.</span><span class='id identifier rubyid_x'>x</span> <span class='op'>&gt;</span> <span class='int'>32</span><span class='rparen'>)</span>
+   <span class='ivar'>@hitbox</span><span class='period'>.</span><span class='id identifier rubyid_y'>y</span> <span class='op'>=</span> <span class='ivar'>@hitbox</span><span class='period'>.</span><span class='id identifier rubyid_y'>y</span> <span class='op'>-</span> <span class='int'>1</span>
+   <span class='ivar'>@hitbox</span><span class='period'>.</span><span class='id identifier rubyid_x'>x</span> <span class='op'>=</span> <span class='ivar'>@hitbox</span><span class='period'>.</span><span class='id identifier rubyid_x'>x</span> <span class='op'>-</span> <span class='int'>2</span>
+    <span class='ivar'>@movCoolDownTimerH</span> <span class='op'>=</span> <span class='int'>2</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="mov_right-instance_method">
+  
+    #<strong>mov_right</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Movimento diagonal direita-baixo.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+59
+60
+61
+62
+63
+64
+65</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'gameObject.rb', line 59</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_mov_right'>mov_right</span><span class='lparen'>(</span><span class='rparen'>)</span> <span class='comment'># Movimento diagonal direita-baixo.
+</span>  <span class='kw'>if</span> <span class='lparen'>(</span><span class='ivar'>@hitbox</span><span class='period'>.</span><span class='id identifier rubyid_y'>y</span> <span class='op'>+</span> <span class='ivar'>@hitbox</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&lt;</span> <span class='int'>480</span> <span class='op'>-</span> <span class='int'>32</span><span class='rparen'>)</span>
+   <span class='ivar'>@hitbox</span><span class='period'>.</span><span class='id identifier rubyid_y'>y</span> <span class='op'>=</span> <span class='ivar'>@hitbox</span><span class='period'>.</span><span class='id identifier rubyid_y'>y</span> <span class='op'>+</span> <span class='int'>1</span>
+   <span class='ivar'>@hitbox</span><span class='period'>.</span><span class='id identifier rubyid_x'>x</span> <span class='op'>=</span> <span class='ivar'>@hitbox</span><span class='period'>.</span><span class='id identifier rubyid_x'>x</span> <span class='op'>+</span> <span class='int'>2</span>
+    <span class='ivar'>@movCoolDownTimerH</span> <span class='op'>=</span> <span class='int'>2</span>         
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="mov_up-instance_method">
+  
+    #<strong>mov_up</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Aumenta altura do objeto.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+45
+46
+47
+48
+49
+50</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'gameObject.rb', line 45</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_mov_up'>mov_up</span><span class='lparen'>(</span><span class='rparen'>)</span> <span class='comment'># Aumenta altura do objeto.
+</span>  <span class='kw'>if</span> <span class='lparen'>(</span><span class='ivar'>@hitbox</span><span class='period'>.</span><span class='id identifier rubyid_zlist'>zlist</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>&lt;</span> <span class='int'>35</span><span class='rparen'>)</span>
+	  <span class='ivar'>@hitbox</span><span class='period'>.</span><span class='id identifier rubyid_zlist'>zlist</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@hitbox</span><span class='period'>.</span><span class='id identifier rubyid_zlist'>zlist</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>+</span> <span class='int'>1</span>
+    <span class='ivar'>@movCoolDownTimerV</span> <span class='op'>=</span> <span class='int'>1</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update_frame-instance_method">
+  
+    #<strong>update_frame</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Instruções a serem executadas a cada frame do jogo, atualiza o estado de
+animação e recebe entrada do teclado.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'gameObject.rb', line 75</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update_frame'>update_frame</span><span class='lparen'>(</span><span class='rparen'>)</span> <span class='comment'># Instruções a serem executadas a cada frame do jogo, atualiza o estado de animação e recebe entrada do teclado.
+</span>  <span class='ivar'>@spriteStateCounter</span> <span class='op'>=</span> <span class='ivar'>@spriteStateCounter</span> <span class='op'>+</span> <span class='int'>1</span> <span class='comment'># Conta mais um frame no mesmo estado.
+</span>  <span class='kw'>if</span><span class='lparen'>(</span><span class='ivar'>@spriteStateCounter</span>  <span class='op'>==</span>  <span class='int'>6</span><span class='rparen'>)</span> <span class='comment'># Se for o sexto frame.
+</span>    <span class='ivar'>@spriteStateCounter</span> <span class='op'>=</span> <span class='int'>0</span> <span class='comment'># Reseta o contador.
+</span>    <span class='ivar'>@spritestate</span> <span class='op'>=</span> <span class='ivar'>@spritestate</span> <span class='op'>+</span> <span class='int'>1</span> <span class='comment'># E atualiza o estado.
+</span>    <span class='kw'>if</span><span class='lparen'>(</span><span class='ivar'>@spritestate</span>  <span class='op'>==</span>  <span class='int'>6</span><span class='rparen'>)</span> <span class='comment'># Se o estado não existir.
+</span>      <span class='ivar'>@spritestate</span> <span class='op'>=</span> <span class='int'>1</span> <span class='comment'># Rebobine a animação.
+</span>    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='ivar'>@movCoolDownTimerV</span> <span class='op'>&gt;</span> <span class='int'>0</span> <span class='comment'># Contagem regressiva para movimento vertical.
+</span>    <span class='ivar'>@movCoolDownTimerV</span> <span class='op'>=</span> <span class='ivar'>@movCoolDownTimerV</span> <span class='op'>-</span> <span class='int'>1</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='ivar'>@movCoolDownTimerH</span> <span class='op'>&gt;</span> <span class='int'>0</span> <span class='comment'># Contagem regressiva para movimento horizontal.
+</span>    <span class='ivar'>@movCoolDownTimerH</span> <span class='op'>=</span> <span class='ivar'>@movCoolDownTimerH</span> <span class='op'>-</span> <span class='int'>1</span>
+  <span class='kw'>end</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span> <span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_UP</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='lparen'>(</span><span class='ivar'>@movCoolDownTimerV</span> <span class='op'>==</span> <span class='int'>0</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='comment'># Se jogador manda subir e não está em turno de espera.
+</span>    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_mov_up'>mov_up</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span> <span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_DOWN</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='lparen'>(</span><span class='ivar'>@movCoolDownTimerV</span> <span class='op'>==</span> <span class='int'>0</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='comment'># Se jogador manda descer e não está em turno de espera.
+</span>    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_mov_down'>mov_down</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span> <span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_RIGHT</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='lparen'>(</span><span class='ivar'>@movCoolDownTimerH</span> <span class='op'>==</span> <span class='int'>0</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='comment'># Se jogador manda ir para a direita e não está em turno de espera.
+</span>    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_mov_right'>mov_right</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span> <span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_LEFT</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='lparen'>(</span><span class='ivar'>@movCoolDownTimerH</span>  <span class='op'>==</span>  <span class='int'>0</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='comment'># Se jogador manda ir para a esquerda e não está em turno de espera.
+</span>    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_mov_left'>mov_left</span>
+  <span class='kw'>end</span>
+
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Sep 29 16:46:24 2017 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.9 (ruby-2.4.2).
+</div>
+
+    </div>
+  </body>
+</html>
