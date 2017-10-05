@@ -96,9 +96,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>gameObject.rb<span class="defines">,<br />
-  try.rb</span>
-</dd>
+    <dd>gameObject.rb</dd>
   </dl>
   
 </div>
@@ -143,28 +141,6 @@
     <span class="summary_desc"><div class='inline'>
 <p>Objeto renderiza seu sprite e uma sombra do seu sprite.</p>
 </div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#execgl-instance_method" title="#execgl (instance method)">#<strong>execgl</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -335,48 +311,6 @@ diagonal para gerar impressão de movimento do personagem.</p>
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="execgl-instance_method">
-  
-    #<strong>execgl</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-204
-205
-206
-207
-208
-209
-210
-211
-212</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'try.rb', line 204</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_execgl'>execgl</span><span class='lparen'>(</span><span class='rparen'>)</span>
-  <span class='kw'>if</span> <span class='ivar'>@movCoolDownTimer</span> <span class='op'>&gt;</span> <span class='int'>0</span>
-    <span class='ivar'>@movCoolDownTimer</span> <span class='op'>=</span> <span class='ivar'>@movCoolDownTimer</span> <span class='op'>-</span> <span class='int'>1</span>
-  <span class='kw'>elsif</span><span class='lparen'>(</span><span class='ivar'>@movCoolDownTimer</span> <span class='op'>==</span> <span class='int'>0</span><span class='rparen'>)</span>
-    <span class='ivar'>@hitbox</span><span class='period'>.</span><span class='id identifier rubyid_y'>y</span> <span class='op'>=</span> <span class='ivar'>@hitbox</span><span class='period'>.</span><span class='id identifier rubyid_y'>y</span> <span class='op'>+</span> <span class='int'>1</span>
-    <span class='ivar'>@hitbox</span><span class='period'>.</span><span class='id identifier rubyid_x'>x</span> <span class='op'>=</span> <span class='ivar'>@hitbox</span><span class='period'>.</span><span class='id identifier rubyid_x'>x</span> <span class='op'>-</span> <span class='int'>1</span>
-    <span class='ivar'>@movCoolDownTimerH</span> <span class='op'>=</span> <span class='int'>2</span>
-  <span class='kw'>end</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
   <h3 class="signature " id="update_frame-instance_method">
   
     #<strong>update_frame</strong>  &#x21d2; <tt>Object</tt> 
@@ -436,7 +370,7 @@ impede que ele se movimente rápido demais..</p>
 </div>
 
       <div id="footer">
-  Generated on Fri Sep 29 16:46:24 2017 by
+  Generated on Tue Oct  3 23:36:52 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.9 (ruby-2.4.2).
 </div>

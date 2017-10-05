@@ -96,9 +96,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>gameObject.rb<span class="defines">,<br />
-  try.rb</span>
-</dd>
+    <dd>gameObject.rb</dd>
   </dl>
   
 </div>
@@ -154,31 +152,6 @@
     <span class="summary_desc"><div class='inline'>
 <p>Objeto renderiza seu sprite e uma sombra do seu sprite, usando o sprite do
 frame de animação atual.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#execgl-instance_method" title="#execgl (instance method)">#<strong>execgl</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>Obs: nao faz sentigo execgl estar num obj do jogo ser responsavel pelo
-jogo.</p>
 </div></span>
   
 </li>
@@ -446,114 +419,6 @@ frame de animação atual.</p>
 <span class='kw'>def</span> <span class='id identifier rubyid_draw'>draw</span><span class='lparen'>(</span><span class='rparen'>)</span> <span class='comment'># Objeto renderiza seu sprite e uma sombra do seu sprite, usando o sprite do frame de animação atual.
 </span>  <span class='ivar'>@sprites</span><span class='lbracket'>[</span><span class='ivar'>@spritestate</span> <span class='op'>-</span> <span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_draw'>draw</span><span class='lparen'>(</span><span class='ivar'>@hitbox</span><span class='period'>.</span><span class='id identifier rubyid_x'>x</span><span class='comma'>,</span> <span class='ivar'>@hitbox</span><span class='period'>.</span><span class='id identifier rubyid_y'>y</span><span class='comma'>,</span> <span class='ivar'>@hitbox</span><span class='period'>.</span><span class='id identifier rubyid_zlist'>zlist</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rparen'>)</span>
   <span class='const'>Gosu</span><span class='op'>::</span><span class='const'>Image</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>./img/</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='ivar'>@name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='ivar'>@name</span> <span class='op'>+</span> <span class='ivar'>@spritestate</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.png</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_draw'>draw</span><span class='lparen'>(</span><span class='ivar'>@hitbox</span><span class='period'>.</span><span class='id identifier rubyid_x'>x</span><span class='comma'>,</span> <span class='ivar'>@hitbox</span><span class='period'>.</span><span class='id identifier rubyid_y'>y</span><span class='comma'>,</span> <span class='ivar'>@hitbox</span><span class='period'>.</span><span class='id identifier rubyid_zlist'>zlist</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='op'>-</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>1</span><span class='comma'>,</span> <span class='int'>1</span><span class='comma'>,</span> <span class='int'>0xff_464678</span><span class='comma'>,</span> <span class='symbol'>:default</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="execgl-instance_method">
-  
-    #<strong>execgl</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Obs: nao faz sentigo execgl estar num obj do jogo ser responsavel pelo
-jogo. Tirar daqui</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-151
-152
-153
-154
-155
-156
-157
-158
-159
-160
-161
-162
-163
-164
-165
-166
-167
-168
-169
-170
-171
-172
-173
-174
-175
-176
-177
-178
-179
-180
-181
-182
-183
-184
-185
-186</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'try.rb', line 151</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_execgl'>execgl</span><span class='lparen'>(</span><span class='rparen'>)</span>			<span class='comment'># Obs: nao faz sentigo execgl estar num obj do jogo ser responsavel pelo jogo. Tirar daqui
-</span>						<span class='comment'># Sugestao : update_falcon() E funcao externa paragame_loop
-</span>  <span class='ivar'>@spriteStateCounter</span> <span class='op'>=</span> <span class='ivar'>@spriteStateCounter</span> <span class='op'>+</span> <span class='int'>1</span>
-  <span class='kw'>if</span><span class='lparen'>(</span><span class='ivar'>@spriteStateCounter</span>  <span class='op'>==</span>  <span class='int'>6</span><span class='rparen'>)</span>
-    <span class='ivar'>@spriteStateCounter</span> <span class='op'>=</span> <span class='int'>0</span>
-    <span class='ivar'>@spritestate</span> <span class='op'>=</span> <span class='ivar'>@spritestate</span> <span class='op'>+</span> <span class='int'>1</span>
-    <span class='kw'>if</span><span class='lparen'>(</span><span class='ivar'>@spritestate</span>  <span class='op'>==</span>  <span class='int'>6</span><span class='rparen'>)</span>
-      <span class='ivar'>@spritestate</span> <span class='op'>=</span> <span class='int'>1</span>
-    <span class='kw'>end</span>
-  <span class='kw'>end</span>
-
-  <span class='kw'>if</span> <span class='ivar'>@movCoolDownTimerV</span> <span class='op'>&gt;</span> <span class='int'>0</span>
-    <span class='ivar'>@movCoolDownTimerV</span> <span class='op'>=</span> <span class='ivar'>@movCoolDownTimerV</span> <span class='op'>-</span> <span class='int'>1</span>
-  <span class='kw'>end</span>
-
-  <span class='kw'>if</span> <span class='ivar'>@movCoolDownTimerH</span> <span class='op'>&gt;</span> <span class='int'>0</span>
-    <span class='ivar'>@movCoolDownTimerH</span> <span class='op'>=</span> <span class='ivar'>@movCoolDownTimerH</span> <span class='op'>-</span> <span class='int'>1</span>
-  <span class='kw'>end</span>
-
-  <span class='kw'>if</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span> <span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_UP</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='lparen'>(</span><span class='ivar'>@movCoolDownTimerV</span> <span class='op'>==</span> <span class='int'>0</span><span class='rparen'>)</span><span class='rparen'>)</span>
-    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_mov_up'>mov_up</span>
-  <span class='kw'>end</span>
-
-  <span class='kw'>if</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span> <span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_DOWN</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='lparen'>(</span><span class='ivar'>@movCoolDownTimerV</span> <span class='op'>==</span> <span class='int'>0</span><span class='rparen'>)</span><span class='rparen'>)</span>
-    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_mov_down'>mov_down</span>
-  <span class='kw'>end</span>
-
-  <span class='kw'>if</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span> <span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_RIGHT</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='lparen'>(</span><span class='ivar'>@movCoolDownTimerH</span> <span class='op'>==</span> <span class='int'>0</span><span class='rparen'>)</span><span class='rparen'>)</span>
-    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_mov_right'>mov_right</span>
-  <span class='kw'>end</span>
-
-  <span class='kw'>if</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span> <span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_LEFT</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='lparen'>(</span><span class='ivar'>@movCoolDownTimerH</span>  <span class='op'>==</span>  <span class='int'>0</span><span class='rparen'>)</span><span class='rparen'>)</span>
-    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_mov_left'>mov_left</span>
-  <span class='kw'>end</span>
-
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -861,7 +726,7 @@ animação e recebe entrada do teclado.</p>
 </div>
 
       <div id="footer">
-  Generated on Fri Sep 29 16:46:24 2017 by
+  Generated on Tue Oct  3 23:36:52 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.9 (ruby-2.4.2).
 </div>
