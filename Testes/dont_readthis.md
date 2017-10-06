@@ -21,8 +21,8 @@ __Dois underlines antes edepois vira negrito__
 
 ### Agora sublista ordenada:
 1. Item a
-2. Item b
-3. Item c
+1. Item b
+1. Item c
   1. Item 1
-  2. Item 2
-  3. Item 3
+  1. Item 2
+  1. Item 3
