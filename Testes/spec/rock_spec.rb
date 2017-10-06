@@ -1,5 +1,4 @@
-
-require './lib/rock'
+require 'spec_helper'
 
 RSpec.describe "Teste modulo 'rock'" do
 	context "Testando 'update_frame'" do

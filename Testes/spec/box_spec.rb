@@ -1,5 +1,4 @@
-require './lib/box'
-
+require 'spec_helper'
 RSpec.describe 	"Testing colision (check_hit)" do 
 
 	context "Colisoes de mesma altura" do

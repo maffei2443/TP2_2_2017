@@ -1,5 +1,5 @@
+require 'spec_helper'
 
-require './lib/falcon.rb'
 
 RSpec.describe "Testando metodos de Falcon" do 
 	context "Testando metodo mov_up " do

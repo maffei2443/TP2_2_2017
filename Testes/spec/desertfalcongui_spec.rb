@@ -1,4 +1,4 @@
-require './lib/desertfalcongui'
+require 'spec_helper'
 
 RSpec.describe 	"Testando 'desertfalcongui'" do 
 

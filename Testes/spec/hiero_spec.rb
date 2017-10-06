@@ -1,4 +1,4 @@
-require './lib/hiero'
+require 'spec_helper'
 
 RSpec.describe "Teste de hieros" do
 	context "testando upddate_frame " do
