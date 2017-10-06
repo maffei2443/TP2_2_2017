@@ -20,7 +20,7 @@ class Rock < GameObject # Decoração pro fundo da tela
     elsif(@movCoolDownTimer == 0)
       @hitbox.y = @hitbox.y + 1
       @hitbox.x = @hitbox.x - 1
-      @movCoolDownTimerH = 2
+      @movCoolDownTimer = 2
     end
   end
 

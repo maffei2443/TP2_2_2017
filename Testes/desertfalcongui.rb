@@ -163,10 +163,10 @@ class DesertFalconGUI < Gosu::Window # Janela do jogo, com script de seleção d
       end
     end
     if (@pausewait > 0)
-      @pausewait = @pausewait - 1
+      @pausewait -= 1
     end
     if (@slowsetwait > 0)
-      @slowsetwait = @slowsetwait - 1
+      @slowsetwait -= 1
     end
     if (Gosu.button_down? Gosu::KB_ESCAPE)# Sair da janela
       exit();

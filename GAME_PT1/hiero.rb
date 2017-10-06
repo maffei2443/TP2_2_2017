@@ -17,12 +17,12 @@ class Hiero < GameObject # Objeto objetivo do jogador, pode ser coletado pelo fa
 
   def update_frame() # A cada frame, caso o temporizador esteja zerado, o hiero deve mover na diagonal para gerar impressão de movimento do personagem. o temporizador impede que ele se movimente rápido demais 
     if @movCoolDownTimer > 0
-      @movCoolDownTimer = @movCoolDownTimer - 1
+      @movCoolDownTimer -= 1
     
     elsif(@movCoolDownTimer == 0)
       @hitbox.y += 1
       @hitbox.x -= 1
-      @movCoolDownTimerH = 2
+      @movCoolDownTimer = 2
 
     end
   end

@@ -5,30 +5,30 @@ class Falcon < GameObject # Objeto controlado pelo player. não necessariamente 
 
   def mov_up() # Aumenta altura do objeto
     if (@hitbox.zlist[0] < 35)
-      @hitbox.zlist[0] = @hitbox.zlist[0] + 1
+      @hitbox.zlist[0] += 1
       @movCoolDownTimerV = 1
     end
   end
   
   def mov_down() # Abaixa altura do objeto
     if (@hitbox.zlist[0] > 1)
-      @hitbox.zlist[0] = @hitbox.zlist[0] - 1
+      @hitbox.zlist[0] -= 1
       @movCoolDownTimerV = 1
     end
   end
 
   def mov_right() # Movimento diagonal direita-baixo
     if (@hitbox.y + @hitbox.length < 480 - 32)
-      @hitbox.y = @hitbox.y + 1
-      @hitbox.x = @hitbox.x + 2
+      @hitbox.y += 1
+      @hitbox.x += 1
       @movCoolDownTimerH = 2         
     end
   end
 
   def mov_left() # Movimento diagonal esquerda-cima
     if (@hitbox.x > 32)
-      @hitbox.y = @hitbox.y - 1
-      @hitbox.x = @hitbox.x - 2
+      @hitbox.y -= 1 
+      @hitbox.x -= 2
       @movCoolDownTimerH = 2
     end
   end
