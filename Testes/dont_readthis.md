@@ -1,5 +1,5 @@
 # Thiss iss an <h1> tag
-## This is an <h2>. tag
+## This is an <h2> tag
 #### This is an <h4> tag
 
 *Escrevendo em italico*
