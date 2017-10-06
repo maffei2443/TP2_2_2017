@@ -23,7 +23,6 @@ __Dois underlines antes edepois vira negrito__
 1. Item a
 2. Item b
 3. Item c
-  * Sublista Ordenada !!!
   1. Item 1
   2. Item 2
   3. Item 3
