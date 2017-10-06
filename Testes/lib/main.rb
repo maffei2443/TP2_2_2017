@@ -1,4 +1,4 @@
-require './tudo'
+require './all'
 
 
 DesertFalconGUI.new.show

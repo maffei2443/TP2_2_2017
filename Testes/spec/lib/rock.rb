@@ -2,7 +2,7 @@ require './gameObject'
 
 
 class Rock < GameObject # Decoração pro fundo da tela
-
+  attr_reader :movCoolDownTimer, :movCoolDownTimerH
   def initialize(name, x, y)
     @movCoolDownTimer = 0 # Pedra se move com velocidade controlada
     @name = name # Cada nome gera uma pedra diferente

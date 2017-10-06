@@ -1,8 +1,0 @@
-require 'gosu'
-require './box'
-require './sprite'
-require './gameObject'
-require './falcon'
-require './hiero'
-require './rock'
-require './desertfalcongui'

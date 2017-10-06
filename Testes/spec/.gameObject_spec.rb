@@ -21,12 +21,6 @@ RSpec.describe "Testando metodos de GameObject" do
 			expect(falcon2.hit?(falcon)).to eq(false)
 		end
 	 
-		it "test initial state" do 
-		end
-
-		it "test the points" do 
-			
-		end
 	end
 
 
