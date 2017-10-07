@@ -22,7 +22,7 @@ class Hiero < GameObject # Objeto objetivo do jogador, pode ser coletado pelo fa
     elsif(@movCoolDownTimer == 0)
       @hitbox.y += 1
       @hitbox.x -= 1
-      @movCoolDownTimer = 2
+      @movCoolDownTimer = 1
 
     end
   end

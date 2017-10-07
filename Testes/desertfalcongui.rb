@@ -40,7 +40,7 @@ class DesertFalconGUI < Gosu::Window # Janela do jogo, com script de seleção d
     @@KEYBOARD_SELECTION_DELAY = 10
     @@PAUSE_SLOWMO_TOGGLE_DELAY = 20
     @@HEADS_UP_DISPLAY_LAYER = 36
-    @@FPS_COUNTER_PERIOD = 60/12
+    @@FPS_COUNTER_PERIOD = 60
     @@BUTTON_SIZE = 48
   end
   
@@ -49,43 +49,33 @@ class DesertFalconGUI < Gosu::Window # Janela do jogo, com script de seleção d
   end
 
   def select_char()
-      if (@kbSelectBuff > 0) # Reduz contador de espera do teclado, para aumentar o delay de resposta e o usuário conseguir reagir
-        @kbSelectBuff = @kbSelectBuff - 1
-      end
-      
-      if (Gosu.button_down? Gosu::KB_RETURN) # Keyboard return(enter) é a seleção
-        @objArray.insert(-1,Falcon.new(@playerOptionList[@selectopt-1], @@MARGIN_OFFSET, @@FALCON_RANGE_BEGIN, [@@FALCON_START_HEIGHT], @@FALCON_BOX_SIZE, @@FALCON_BOX_SIZE)) # Cria um objeto de jogador respeitando a seleção do usuário e põe como primeiro objeto do jogo
-        @playerSelect = true
-        return true
-      end
-
-      return false
+    if (@kbSelectBuff > 0) # Reduz contador de espera do teclado, para aumentar o delay de resposta e o usuário conseguir reagir
+      @kbSelectBuff = @kbSelectBuff - 1
+    end
+    if (Gosu.button_down? Gosu::KB_RETURN) # Keyboard return(enter) é a seleção
+      @objArray.insert(-1,Falcon.new(@playerOptionList[@selectopt-1], @@MARGIN_OFFSET, @@FALCON_RANGE_BEGIN, [@@FALCON_START_HEIGHT], @@FALCON_BOX_SIZE, @@FALCON_BOX_SIZE)) # Cria um objeto de jogador respeitando a seleção do usuário e põe como primeiro objeto do jogo
+      @playerSelect = true
+    end
   end
 
-  def mov()
-      flag = false
-      if (Gosu.button_down? Gosu::KB_RIGHT) and (@selectopt < @maxplayeroptions) and (@kbSelectBuff == 0) # Muda seleção para a direita
-        @selectopt = @selectopt + 1
-        @kbSelectBuff = @@KEYBOARD_SELECTION_DELAY
-        flag = true
-      end
+  def mov_selection()
+    if (Gosu.button_down? Gosu::KB_RIGHT) and (@selectopt < @maxplayeroptions) and (@kbSelectBuff == 0) # Muda seleção para a direita
+      @selectopt = @selectopt + 1
+      @kbSelectBuff = @@KEYBOARD_SELECTION_DELAY
+    end
 
-      if (Gosu.button_down? Gosu::KB_LEFT) and (@selectopt > 1) and (@kbSelectBuff == 0) # Muda seleção para a esquerda
-        @selectopt = @selectopt - 1
-        @kbSelectBuff = @@KEYBOARD_SELECTION_DELAY
-        flag = true
-      end
-      if (Gosu.button_down? Gosu::KB_DOWN) and (@selectopt+11 < @maxplayeroptions) and (@kbSelectBuff == 0) # Muda seleção para baixo
-        @selectopt = @selectopt + 12
-        @kbSelectBuff = @@KEYBOARD_SELECTION_DELAY
-        flag = true
-      end
-      if (Gosu.button_down? Gosu::KB_UP) and (@selectopt-11 > 1) and (@kbSelectBuff == 0) # Muda seleção para cima
-        @selectopt = @selectopt - 12
-        @kbSelectBuff = @@KEYBOARD_SELECTION_DELAY
-        flag = true
-      end
-      return flag
+    if (Gosu.button_down? Gosu::KB_LEFT) and (@selectopt > 1) and (@kbSelectBuff == 0) # Muda seleção para a esquerda
+      @selectopt = @selectopt - 1
+      @kbSelectBuff = @@KEYBOARD_SELECTION_DELAY
+    end
+    if (Gosu.button_down? Gosu::KB_DOWN) and (@selectopt+11 < @maxplayeroptions) and (@kbSelectBuff == 0) # Muda seleção para baixo
+      @selectopt = @selectopt + 12
+      @kbSelectBuff = @@KEYBOARD_SELECTION_DELAY
+    end
+    if (Gosu.button_down? Gosu::KB_UP) and (@selectopt-11 > 1) and (@kbSelectBuff == 0) # Muda seleção para cima
+      @selectopt = @selectopt - 12
+      @kbSelectBuff = @@KEYBOARD_SELECTION_DELAY
+    end
   end
 
   def update # Enquanto não for selecionado um personagem, rodar a tela de seleção de personagems. Após escolher um personagem, colocar esse personagem no jogo e rodar os frames do jogo
@@ -132,10 +122,10 @@ class DesertFalconGUI < Gosu::Window # Janela do jogo, com script de seleção d
           @objArray.delete(obj)
         end
       end
-    else # Seleção de personagem script
+    elsif(@playerSelect == false) # Seleção de personagem script
       self.select_char
+      self.mov_selection
     end
-    self.mov
     if ((Gosu.button_down? Gosu::KB_P) and (@pausewait == 0))# Pause
       if (@paused == false)
         @paused = true

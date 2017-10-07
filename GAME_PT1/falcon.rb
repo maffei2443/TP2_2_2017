@@ -3,37 +3,6 @@ require './gameObject'
 
 class Falcon < GameObject # Objeto controlado pelo player. não necessariamente um passaro
 
-  def mov_up() # Aumenta altura do objeto
-    if (@hitbox.zlist[0] < 35)
-      @hitbox.zlist[0] += 1
-      @movCoolDownTimerV = 1
-    end
-  end
-  
-  def mov_down() # Abaixa altura do objeto
-    if (@hitbox.zlist[0] > 1)
-      @hitbox.zlist[0] -= 1
-      @movCoolDownTimerV = 1
-    end
-  end
-
-  def mov_right() # Movimento diagonal direita-baixo
-    if (@hitbox.y + @hitbox.length < 480 - 32)
-      @hitbox.y += 1
-      @hitbox.x += 1
-      @movCoolDownTimerH = 2         
-    end
-  end
-
-  def mov_left() # Movimento diagonal esquerda-cima
-    if (@hitbox.x > 32)
-      @hitbox.y -= 1 
-      @hitbox.x -= 2
-      @movCoolDownTimerH = 2
-    end
-  end
-
-
   def initialize(name, x, y, zlist, width, length)
     @movCoolDownTimerV = 0 # Evita aceleração descontrolada na vertical
     @movCoolDownTimerH = 0 # Evita aceleração descontrolada na horizontal
@@ -49,6 +18,36 @@ class Falcon < GameObject # Objeto controlado pelo player. não necessariamente 
     Gosu::Image.new("./img/" + @name + "/" + @name + @spritestate.to_s + ".png").draw(@hitbox.x, @hitbox.y, @hitbox.zlist[0]-1, 1, 1, 0xff_464678, :default)
   end
 
+  def mov_up() # Aumenta altura do objeto
+    if (@hitbox.zlist[0] < 35)
+      @hitbox.zlist[0] = @hitbox.zlist[0] + 1
+      @movCoolDownTimerV = 1
+    end
+  end
+  
+  def mov_down() # Abaixa altura do objeto
+    if (@hitbox.zlist[0] > 1)
+      @hitbox.zlist[0] = @hitbox.zlist[0] - 1
+      @movCoolDownTimerV = 1
+    end
+  end
+
+  def mov_right() # Movimento diagonal direita-baixo
+    if (@hitbox.y + @hitbox.length < 480 - 32)
+      @hitbox.y = @hitbox.y + 1
+      @hitbox.x = @hitbox.x + 2
+      @movCoolDownTimerH = 2         
+    end
+  end
+
+  def mov_left() # Movimento diagonal esquerda-cima
+    if (@hitbox.x > 32)
+      @hitbox.y = @hitbox.y - 1
+      @hitbox.x = @hitbox.x - 2
+      @movCoolDownTimerH = 2
+    end
+  end
+
   def update_frame() # Instruções a serem executadas a cada frame do jogo, atualiza o estado de animação e recebe entrada do teclado
     @spriteStateCounter = @spriteStateCounter + 1 # Conta mais um frame no mesmo estado
     if(@spriteStateCounter  ==  6) # Se for o sexto frame
@@ -61,21 +60,27 @@ class Falcon < GameObject # Objeto controlado pelo player. não necessariamente 
 
     if @movCoolDownTimerV > 0 # Contagem regressiva para movimento vertical
       @movCoolDownTimerV = @movCoolDownTimerV - 1
-    
-    elsif @movCoolDownTimerH > 0 # Contagem regressiva para movimento horizontal
+    end
+
+    if @movCoolDownTimerH > 0 # Contagem regressiva para movimento horizontal
       @movCoolDownTimerH = @movCoolDownTimerH - 1
-    
-    elsif ((Gosu.button_down?(Gosu::KB_UP)) and (@movCoolDownTimerV == 0)) # Se jogador manda subir e não está em turno de espera
+    end
+    if ((Gosu.button_down? Gosu::KB_UP) and (@movCoolDownTimerV == 0)) # Se jogador manda subir e não está em turno de espera
       self.mov_up
+    end
 
-    elsif ((Gosu.button_down?(Gosu::KB_DOWN)) and (@movCoolDownTimerV == 0)) # Se jogador manda descer e não está em turno de espera
+    if ((Gosu.button_down? Gosu::KB_DOWN) and (@movCoolDownTimerV == 0)) # Se jogador manda descer e não está em turno de espera
       self.mov_down
+    end
 
-    elsif ((Gosu.button_down?(Gosu::KB_RIGHT)) and (@movCoolDownTimerH == 0))# Se jogador manda ir para a direita e não está em turno de espera
+    if ((Gosu.button_down? Gosu::KB_RIGHT) and (@movCoolDownTimerH == 0))# Se jogador manda ir para a direita e não está em turno de espera
       self.mov_right
+    end
 
-    elsif ((Gosu.button_down?(Gosu::KB_LEFT)) and (@movCoolDownTimerH  ==  0))# Se jogador manda ir para a esquerda e não está em turno de espera
+    if ((Gosu.button_down? Gosu::KB_LEFT) and (@movCoolDownTimerH  ==  0))# Se jogador manda ir para a esquerda e não está em turno de espera
       self.mov_left
     end
-  end  
+
+  end
+
 end

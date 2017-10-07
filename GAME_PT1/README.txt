@@ -4,5 +4,6 @@
 #### Comandos do jogo:
     ESC   - Sai do game
     p     - Pausa/despausa o jogo
-    Setas - Movimentam o personagem escolhido
+    o     - Ativa/desativa slowmotion
+    Setas - Movimentam o personagem escolhido/movimenta seleção de personagem
     ENTER - Seleciona o personagem a ser usado durante o jogo na tela de    seleção de personagens

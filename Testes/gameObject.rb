@@ -11,7 +11,7 @@ class GameObject # Qualquer objeto que irá existir precisa desses elementos de 
   end
 
   def draw() # Objeto base só mostra o sprite
-    @sprite.draw(@x, @y, @z)
+    @sprite.draw(@hitbox.x, @hitbox.y, @hitbox.zlist[0])
   end
 
   def hit?(obj) # Pergunta ao objeto se ele colide com determinada área tridimensional
