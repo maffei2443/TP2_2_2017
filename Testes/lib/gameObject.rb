@@ -1,6 +1,6 @@
 require 'gosu'
-require './box'
-require './sprite'
+require_relative '../lib/box'
+require_relative '../lib/sprite'
 
 class GameObject # Qualquer objeto que irá existir precisa desses elementos de classe
 

@@ -1,4 +1,4 @@
-require './gameObject'
+require_relative '../lib/gameObject'
 
 
 class Falcon < GameObject # Objeto controlado pelo player. não necessariamente um passaro

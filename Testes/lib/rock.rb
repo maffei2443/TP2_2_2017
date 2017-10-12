@@ -1,4 +1,4 @@
-require './gameObject'
+require_relative '../lib/gameObject'
 
 
 class Rock < GameObject # Decoração pro fundo da tela

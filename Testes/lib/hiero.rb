@@ -1,4 +1,4 @@
-require './gameObject'
+require_relative '../lib/gameObject'
 
 
 class Hiero < GameObject # Objeto objetivo do jogador, pode ser coletado pelo falcon, se move em direção ao canto inferior esquerdo
