@@ -1,0 +1,15 @@
+# Apenas um modulo para facilitar a chamada das bibliotecas a partir de main.rb.
+
+require 'gosu'
+require './box'
+require './sprite'
+require './gameObject'
+require './falcon'
+require './hiero'
+require './rock'
+require './enemy'
+require './bulletbox'
+require './bullet'
+require './desertfalcongui'
+require './charselectmanager'
+require './timecontrolmanager'
