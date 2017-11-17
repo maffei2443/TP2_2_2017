@@ -339,99 +339,95 @@
 90
 91
 92
-93
-94
-95</pre>
+93</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'readnamemanager.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_read'>read</span> <span class='comment'># Printa imagem deslocada pela altura
-</span>	<span class='kw'>if</span> <span class='lparen'>(</span><span class='ivar'>@inputBuffer</span> <span class='op'>&gt;</span> <span class='int'>0</span><span class='rparen'>)</span>
-	  <span class='ivar'>@inputBuffer</span> <span class='op'>-=</span> <span class='int'>1</span>
-	<span class='kw'>end</span>
-  <span class='kw'>if</span> <span class='lparen'>(</span><span class='ivar'>@inputBuffer</span> <span class='op'>==</span> <span class='int'>0</span><span class='rparen'>)</span>
-    <span class='kw'>if</span> <span class='lparen'>(</span><span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_A</span><span class='rparen'>)</span><span class='rparen'>)</span>
-    	<span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
-    	<span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>A</span><span class='tstring_end'>&#39;</span></span>
-    <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_B</span><span class='rparen'>)</span><span class='rparen'>)</span>
-    	<span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
-    	<span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>B</span><span class='tstring_end'>&#39;</span></span>
-    <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_C</span><span class='rparen'>)</span><span class='rparen'>)</span>
-    	<span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
-    	<span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>C</span><span class='tstring_end'>&#39;</span></span>
-    <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_D</span><span class='rparen'>)</span><span class='rparen'>)</span>
-    	<span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
-    	<span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>D</span><span class='tstring_end'>&#39;</span></span>
-    <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_E</span><span class='rparen'>)</span><span class='rparen'>)</span>
-    	<span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
-    	<span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>E</span><span class='tstring_end'>&#39;</span></span>
-    <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_F</span><span class='rparen'>)</span><span class='rparen'>)</span>
-    	<span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
-    	<span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>F</span><span class='tstring_end'>&#39;</span></span>
-    <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_G</span><span class='rparen'>)</span><span class='rparen'>)</span>
-    	<span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
-    	<span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>G</span><span class='tstring_end'>&#39;</span></span>
-    <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_H</span><span class='rparen'>)</span><span class='rparen'>)</span>
-    	<span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
-    	<span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>H</span><span class='tstring_end'>&#39;</span></span>
-    <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_I</span><span class='rparen'>)</span><span class='rparen'>)</span>
-    	<span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
-    	<span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>I</span><span class='tstring_end'>&#39;</span></span>
-    <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_J</span><span class='rparen'>)</span><span class='rparen'>)</span>
-    	<span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
-    	<span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>J</span><span class='tstring_end'>&#39;</span></span>
-    <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_K</span><span class='rparen'>)</span><span class='rparen'>)</span>
-    	<span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
-    	<span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>K</span><span class='tstring_end'>&#39;</span></span>
-    <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_L</span><span class='rparen'>)</span><span class='rparen'>)</span>
-    	<span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
-    	<span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>L</span><span class='tstring_end'>&#39;</span></span>
-    <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_M</span><span class='rparen'>)</span><span class='rparen'>)</span>
-    	<span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
-    	<span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>M</span><span class='tstring_end'>&#39;</span></span>
-    <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_N</span><span class='rparen'>)</span><span class='rparen'>)</span>
-    	<span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
-    	<span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>N</span><span class='tstring_end'>&#39;</span></span>
-    <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_O</span><span class='rparen'>)</span><span class='rparen'>)</span>
-    	<span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
-    	<span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>O</span><span class='tstring_end'>&#39;</span></span>
-    <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_P</span><span class='rparen'>)</span><span class='rparen'>)</span>
-    	<span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
-    	<span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>P</span><span class='tstring_end'>&#39;</span></span>
-    <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_Q</span><span class='rparen'>)</span><span class='rparen'>)</span>
-    	<span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
-    	<span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Q</span><span class='tstring_end'>&#39;</span></span>
-    <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_R</span><span class='rparen'>)</span><span class='rparen'>)</span>
-    	<span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
-    	<span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>R</span><span class='tstring_end'>&#39;</span></span>
-    <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_S</span><span class='rparen'>)</span><span class='rparen'>)</span>
-    	<span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
-    	<span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>S</span><span class='tstring_end'>&#39;</span></span>
-    <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_T</span><span class='rparen'>)</span><span class='rparen'>)</span>
-    	<span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
-    	<span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>T</span><span class='tstring_end'>&#39;</span></span>
-    <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_U</span><span class='rparen'>)</span><span class='rparen'>)</span>
-    	<span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
-    	<span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>U</span><span class='tstring_end'>&#39;</span></span>
-    <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_V</span><span class='rparen'>)</span><span class='rparen'>)</span>
-    	<span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
-    	<span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>V</span><span class='tstring_end'>&#39;</span></span>
-    <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_W</span><span class='rparen'>)</span><span class='rparen'>)</span>
-    	<span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
-    	<span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>W</span><span class='tstring_end'>&#39;</span></span>
-    <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_X</span><span class='rparen'>)</span><span class='rparen'>)</span>
-    	<span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
-    	<span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>X</span><span class='tstring_end'>&#39;</span></span>
-    <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_Y</span><span class='rparen'>)</span><span class='rparen'>)</span>
-    	<span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
-    	<span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Y</span><span class='tstring_end'>&#39;</span></span>
-    <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_Z</span><span class='rparen'>)</span><span class='rparen'>)</span>
-    	<span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
-    	<span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Z</span><span class='tstring_end'>&#39;</span></span>
+</span>  <span class='ivar'>@inputBuffer</span> <span class='op'>-=</span> <span class='int'>1</span> <span class='kw'>if</span> <span class='ivar'>@inputBuffer</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+  <span class='kw'>if</span> <span class='ivar'>@inputBuffer</span> <span class='op'>==</span> <span class='int'>0</span>
+    <span class='kw'>if</span> <span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_A</span><span class='rparen'>)</span>
+      <span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
+      <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>A</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>elsif</span> <span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_B</span><span class='rparen'>)</span>
+      <span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
+      <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>B</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>elsif</span> <span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_C</span><span class='rparen'>)</span>
+      <span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
+      <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>C</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>elsif</span> <span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_D</span><span class='rparen'>)</span>
+      <span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
+      <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>D</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>elsif</span> <span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_E</span><span class='rparen'>)</span>
+      <span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
+      <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>E</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>elsif</span> <span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_F</span><span class='rparen'>)</span>
+      <span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
+      <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>F</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>elsif</span> <span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_G</span><span class='rparen'>)</span>
+      <span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
+      <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>G</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>elsif</span> <span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_H</span><span class='rparen'>)</span>
+      <span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
+      <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>H</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>elsif</span> <span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_I</span><span class='rparen'>)</span>
+      <span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
+      <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>I</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>elsif</span> <span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_J</span><span class='rparen'>)</span>
+      <span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
+      <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>J</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>elsif</span> <span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_K</span><span class='rparen'>)</span>
+      <span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
+      <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>K</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>elsif</span> <span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_L</span><span class='rparen'>)</span>
+      <span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
+      <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>L</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>elsif</span> <span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_M</span><span class='rparen'>)</span>
+      <span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
+      <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>M</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>elsif</span> <span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_N</span><span class='rparen'>)</span>
+      <span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
+      <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>N</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>elsif</span> <span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_O</span><span class='rparen'>)</span>
+      <span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
+      <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>O</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>elsif</span> <span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_P</span><span class='rparen'>)</span>
+      <span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
+      <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>P</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>elsif</span> <span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_Q</span><span class='rparen'>)</span>
+      <span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
+      <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Q</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>elsif</span> <span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_R</span><span class='rparen'>)</span>
+      <span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
+      <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>R</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>elsif</span> <span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_S</span><span class='rparen'>)</span>
+      <span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
+      <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>S</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>elsif</span> <span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_T</span><span class='rparen'>)</span>
+      <span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
+      <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>T</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>elsif</span> <span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_U</span><span class='rparen'>)</span>
+      <span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
+      <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>U</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>elsif</span> <span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_V</span><span class='rparen'>)</span>
+      <span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
+      <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>V</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>elsif</span> <span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_W</span><span class='rparen'>)</span>
+      <span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
+      <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>W</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>elsif</span> <span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_X</span><span class='rparen'>)</span>
+      <span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
+      <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>X</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>elsif</span> <span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_Y</span><span class='rparen'>)</span>
+      <span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
+      <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Y</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>elsif</span> <span class='const'>Gosu</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KB_Z</span><span class='rparen'>)</span>
+      <span class='ivar'>@inputBuffer</span> <span class='op'>=</span> <span class='int'>30</span>
+      <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Z</span><span class='tstring_end'>&#39;</span></span>
     <span class='kw'>end</span>
   <span class='kw'>end</span>
-  <span class='kw'>return</span> <span class='kw'>nil</span>
+  <span class='kw'>nil</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -443,7 +439,7 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Nov 17 21:27:11 2017 by
+  Generated on Fri Nov 17 21:45:41 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.9 (ruby-2.4.2).
 </div>

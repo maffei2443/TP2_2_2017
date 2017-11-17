@@ -60,7 +60,7 @@ class DesertFalconGUI < Gosu::Window
   end
 
   def exitsoft # Sai para o menu, resetando o que for necessario
-    if (@menuSelectionManager.menuSelect == true && @selectionManager.playerSelect == true)
+    if @menuSelectionManager.menuSelect == true && @selectionManager.playerSelect == true
       @readingname = true
     end
     @objArray.each do |obj|
@@ -79,16 +79,16 @@ class DesertFalconGUI < Gosu::Window
 
   def nameholder_draw
     stringaux = nil
-    if @nameholder == nil
-      stringaux = '___'
-    elsif @nameholder.size == 1
-      stringaux = @nameholder + '__'
-    elsif @nameholder.size == 2
-      stringaux = @nameholder + '_'
-    else
-      stringaux = @nameholder
-    end
-    return stringaux
+    stringaux = if @nameholder.nil?
+                  '___'
+                elsif @nameholder.size == 1
+                  @nameholder + '__'
+                elsif @nameholder.size == 2
+                  @nameholder + '_'
+                else
+                  @nameholder
+                end
+    stringaux
   end
 
   def make_10_tall_obj(z1) # Cria lista de alturas pra um objeto de altura 10
@@ -111,7 +111,7 @@ class DesertFalconGUI < Gosu::Window
         @objArray.insert(- 1, newobj) unless newobj.nil?
       end
       srand Random.new_seed
-        # Criacao de novos objetos com rand
+      # Criacao de novos objetos com rand
       if rand(300).to_i.zero? && @hieros < @@HIERO_MAX_AMOUNT
         raux = rand(3).to_i
         if raux.zero?
@@ -194,8 +194,8 @@ class DesertFalconGUI < Gosu::Window
       unless opt.nil?
         @objArray.insert(-1, Falcon.new(opt, @@MARGIN_OFFSET, @@FALCON_RANGE_BEGIN, [@@FALCON_START_HEIGHT], @@FALCON_BOX_SIZE, @@FALCON_BOX_SIZE))
       end
-    elsif @readingname == true 
-      if @nameholder != nil and @nameholder.size == 3
+    elsif @readingname == true
+      if !@nameholder.nil? && (@nameholder.size == 3)
         ranks = le_rk('r')
         ranks.insert(-1, [@score, @nameholder])
         write('r', ranks)
@@ -204,10 +204,10 @@ class DesertFalconGUI < Gosu::Window
         @readingname = false
       else
         letter = @readingmanager.read
-        if (@nameholder == nil)
+        if @nameholder.nil?
           @nameholder = letter
-        elsif (letter != nil)
-          @nameholder = @nameholder + letter
+        elsif !letter.nil?
+          @nameholder += letter
         end
       end
     elsif @menuSelectionManager.menuSelect == false
@@ -218,9 +218,7 @@ class DesertFalconGUI < Gosu::Window
     end
     @timingManager.update_timing
     exitsoft if Gosu.button_down?(Gosu::KB_ESCAPE)
-    if @falconHealth.zero?
-      exitsoft
-    end
+    exitsoft if @falconHealth.zero?
   end
 
   def draw
