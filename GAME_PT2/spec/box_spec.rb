@@ -1,4 +1,4 @@
-require 'spec_helper'
+require_relative '../spec/spec_helper'
 RSpec.describe 	"Testing colision (check_hit)" do 
 
 	context "Colisoes de mesma altura" do

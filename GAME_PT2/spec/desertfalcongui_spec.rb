@@ -1,4 +1,4 @@
-require 'spec_helper'
+require_relative '../spec/spec_helper'
 
 RSpec.describe 	"Testando 'desertfalcongui'" do 
 
@@ -10,7 +10,7 @@ RSpec.describe 	"Testando 'desertfalcongui'" do
 			10.times do |i|
 				vet[i] = i
 			end
-			vet2 = obj.make10tallObj(0)
+			vet2 = obj.make_10_tall_obj(0)
 			expect(vet).to eq(vet2)
 		end
 		
@@ -20,7 +20,7 @@ RSpec.describe 	"Testando 'desertfalcongui'" do
 			10.times do |i|
 				vet[i] = i
 			end
-			vet2 = obj.make10tallObj(1)
+			vet2 = obj.make_10_tall_obj(1)
 			expect(vet == vet2).to eq(false)
 		end
 

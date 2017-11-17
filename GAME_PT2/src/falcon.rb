@@ -92,7 +92,7 @@ class Falcon < GameObject
     reload if Gosu.button_down?(Gosu::KB_R) && @weaponCoolDown.zero?
   end
 
-  def reload
+  def reload # Logica de recarregar o falcon
     if @@CLIPSIZE > @loadedAmmo
       if @ammo >= @@CLIPSIZE - @loadedAmmo
         @ammo -= (@@CLIPSIZE - @loadedAmmo)
@@ -109,7 +109,7 @@ class Falcon < GameObject
     @ammo += ammount
   end
 
-  def object_made
+  def object_made # Verifica e retorna objetos criados pelo falcon (tiro)
     unless @objMade.nil?
       buff = @objMade
       @objMade = nil

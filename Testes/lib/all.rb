@@ -1,8 +1,0 @@
-require 'gosu'
-require_relative '../lib/box'
-require_relative '../lib/sprite'
-require_relative '../lib/gameObject'
-require_relative '../lib/falcon'
-require_relative '../lib/hiero'
-require_relative '../lib/rock'
-require_relative '../lib/desertfalcongui'

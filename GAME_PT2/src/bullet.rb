@@ -7,7 +7,7 @@ class Bullet < GameObject
     @name = nameAuthor
     @sprite = Sprite.new('./img/' + nameAuthor + '/' + nameAuthor + 'projectile.png')
     @hitbox = Hitbox.new(x, y, zlist, 8, 8)
-    @shooterFlag = falcOrNot
+    @shooterFlag = falcOrNot # Flag diz quem atirou essa bala, serve para dizer a direcao e velocidade do projetil
   end
 
   def draw
@@ -18,7 +18,7 @@ class Bullet < GameObject
   def update_frame
     @movCoolDownTimer -= 1 if @movCoolDownTimer > 0
 
-    if @movCoolDownTimer.zero?
+    if @movCoolDownTimer.zero? # Velocidade absoluta diferente para igualar a velocidade relativa ao solo, velocidade de 2 em relacao ao solo em ambos os casos
       if @shooterFlag == false
         @hitbox.y += 3
         @hitbox.x -= 3

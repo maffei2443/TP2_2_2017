@@ -13,11 +13,15 @@
 # it.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
-require_relative '../rock'
-require_relative '../hiero'
-require_relative '../falcon'
-require_relative '../desertfalcongui'
-require_relative '../box'
+# 
+require_relative '../lib/box'
+require_relative '../lib/gameObject'
+require_relative '../lib/rock'
+require_relative '../lib/hiero'
+require_relative '../lib/falcon'
+require_relative '../lib/desertfalcongui'
+require_relative '../lib/tower'
+require_relative '../lib/enemy'
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
