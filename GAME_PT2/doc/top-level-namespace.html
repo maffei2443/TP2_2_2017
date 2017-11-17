@@ -209,20 +209,17 @@ mainselectmanager e desertfalcongui</p>
 22
 23
 24
-25
-26
-27
-28</pre>
+25</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'vetor.rb', line 2</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_le_rk'>le_rk</span><span class='lparen'>(</span><span class='id identifier rubyid_nome'>nome</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_nome'>nome</span><span class='period'>.</span><span class='id identifier rubyid_gsub!'>gsub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[\n\t]</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>  <span class='comment'># Retra caracteres teminais (\n por exemplo) e tabs
+  <span class='id identifier rubyid_nome'>nome</span><span class='period'>.</span><span class='id identifier rubyid_gsub!'>gsub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[\n\t]</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># Retra caracteres teminais (\n por exemplo) e tabs
 </span>
   <span class='id identifier rubyid_ranking'>ranking</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span><span class='id identifier rubyid_nome'>nome</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>r</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
 
-  <span class='id identifier rubyid_t'>t</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='id identifier rubyid_t'>t</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
   <span class='id identifier rubyid_i'>i</span> <span class='op'>=</span> <span class='int'>0</span>
 
   <span class='id identifier rubyid_ranking'>ranking</span><span class='period'>.</span><span class='id identifier rubyid_each_line'>each_line</span><span class='period'>.</span><span class='id identifier rubyid_collect'>collect</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_line'>line</span><span class='op'>|</span>
@@ -232,17 +229,14 @@ mainselectmanager e desertfalcongui</p>
     <span class='id identifier rubyid_i'>i</span> <span class='op'>+=</span> <span class='int'>1</span>
   <span class='kw'>end</span>
 
-
   <span class='id identifier rubyid_ranking'>ranking</span><span class='period'>.</span><span class='id identifier rubyid_close'>close</span>
-  <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_sort!'>sort!</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_a'>a</span><span class='comma'>,</span><span class='id identifier rubyid_b'>b</span><span class='op'>|</span> <span class='id identifier rubyid_a'>a</span> <span class='op'>&lt;=&gt;</span> <span class='id identifier rubyid_b'>b</span><span class='rbrace'>}</span>
+  <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_sort!'>sort!</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_a'>a</span><span class='comma'>,</span> <span class='id identifier rubyid_b'>b</span><span class='op'>|</span> <span class='id identifier rubyid_a'>a</span> <span class='op'>&lt;=&gt;</span> <span class='id identifier rubyid_b'>b</span> <span class='rbrace'>}</span>
   <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_reverse!'>reverse!</span>
-<span class='embdoc_beg'>=begin
-</span><span class='embdoc'>  t.each{
-</span><span class='embdoc'>    |x, y|
-</span><span class='embdoc'>    puts &quot;#{x} #{y}&quot;
-</span><span class='embdoc'>  }
-</span><span class='embdoc_end'>=end
-</span>  <span class='kw'>return</span> <span class='id identifier rubyid_t'>t</span>
+  <span class='comment'>#   t.each{
+</span>  <span class='comment'>#     |x, y|
+</span>  <span class='comment'>#     puts &quot;#{x} #{y}&quot;
+</span>  <span class='comment'>#   }
+</span>  <span class='id identifier rubyid_t'>t</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -264,6 +258,9 @@ mainselectmanager e desertfalcongui</p>
       <pre class="lines">
 
 
+27
+28
+29
 30
 31
 32
@@ -279,34 +276,29 @@ mainselectmanager e desertfalcongui</p>
 42
 43
 44
-45
-46
-47
-48
-49</pre>
+45</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'vetor.rb', line 30</span>
+      <pre class="code"><span class="info file"># File 'vetor.rb', line 27</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_write'>write</span><span class='lparen'>(</span><span class='id identifier rubyid_nome'>nome</span><span class='comma'>,</span> <span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_nome'>nome</span><span class='period'>.</span><span class='id identifier rubyid_gsub!'>gsub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[\n\t]</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>	<span class='comment'># Retira caracteres teminais (\n por exemplo) e tabs
 </span>
   <span class='id identifier rubyid_ranking'>ranking</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span><span class='id identifier rubyid_nome'>nome</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>w+</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
 
-  <span class='id identifier rubyid_t'>t</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='id identifier rubyid_t'>t</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
   <span class='id identifier rubyid_i'>i</span> <span class='op'>=</span> <span class='int'>0</span>
   <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_score'>score</span><span class='comma'>,</span> <span class='id identifier rubyid_nome2'>nome2</span><span class='op'>|</span>
     <span class='id identifier rubyid_t'>t</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_score'>score</span><span class='comma'>,</span> <span class='id identifier rubyid_nome2'>nome2</span><span class='rbracket'>]</span>
     <span class='id identifier rubyid_i'>i</span> <span class='op'>+=</span> <span class='int'>1</span>
   <span class='kw'>end</span>
-  <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_sort!'>sort!</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_a'>a</span><span class='comma'>,</span><span class='id identifier rubyid_b'>b</span><span class='op'>|</span> <span class='id identifier rubyid_a'>a</span> <span class='op'>&lt;=&gt;</span> <span class='id identifier rubyid_b'>b</span><span class='rbrace'>}</span>
+  <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_sort!'>sort!</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_a'>a</span><span class='comma'>,</span> <span class='id identifier rubyid_b'>b</span><span class='op'>|</span> <span class='id identifier rubyid_a'>a</span> <span class='op'>&lt;=&gt;</span> <span class='id identifier rubyid_b'>b</span> <span class='rbrace'>}</span>
   <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_reverse!'>reverse!</span>
-  <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lbrace'>{</span>
-    <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='comma'>,</span> <span class='id identifier rubyid_y'>y</span><span class='op'>|</span>
+  <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='comma'>,</span> <span class='id identifier rubyid_y'>y</span><span class='op'>|</span>
     <span class='id identifier rubyid_ranking'>ranking</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_x'>x</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_y'>y</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
-  <span class='rbrace'>}</span>
+  <span class='kw'>end</span>
   <span class='id identifier rubyid_ranking'>ranking</span><span class='period'>.</span><span class='id identifier rubyid_close'>close</span>
-  <span class='kw'>return</span> <span class='id identifier rubyid_t'>t</span>
+  <span class='id identifier rubyid_t'>t</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -318,7 +310,7 @@ mainselectmanager e desertfalcongui</p>
 </div>
 
       <div id="footer">
-  Generated on Fri Nov 17 21:27:11 2017 by
+  Generated on Fri Nov 17 21:45:40 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.9 (ruby-2.4.2).
 </div>

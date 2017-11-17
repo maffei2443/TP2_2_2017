@@ -23,7 +23,7 @@ class Enemy < GameObject
     Gosu::Image.new('./img/' + @name + '/' + @name + @spriteState.to_s + '.png').draw(@hitbox.x, @hitbox.y, @hitbox.zlist[0] - 1, 1, 1, 0xff_464678, :default)
   end
 
-  def update_frame# Move e possivelmente atira
+  def update_frame # Move e possivelmente atira
     @spriteStateCounter += 1
     if @spriteStateCounter == 6
       @spriteStateCounter = 0

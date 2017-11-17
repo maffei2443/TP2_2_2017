@@ -4,9 +4,9 @@ Integrantes do grupo:
         Arthur da Silveira Couto	      16/0002575
 
 Link para o projeto::
-https://github.com/maffei2443/TP2_2_2017
+https://github.com/maffei2443/TP2_2_2017/tree/arthur
 
-[Projeto](https://github.com/maffei2443/TP2_2_2017)
+[Projeto](https://github.com/maffei2443/TP2_2_2017/tree/arthur)
 
 [Instalacao do ruby](https://www.ruby-lang.org/pt/documentation/installation/)
 
